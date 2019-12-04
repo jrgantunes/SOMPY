@@ -104,7 +104,7 @@ class View2D(MapView):
                 ax.set_xticklabels([])
                 plt.colorbar(pl)
         elif som.codebook.lattice=="hexa":
-            plot_hex_map(codebook.reshape(som.codebook.mapsize + [som.codebook.matrix.shape[-1]]), titles=names,
+            plot_hex_map(codebook.reshape(som.codebook.mapsize + tuple([som.codebook.matrix.shape[-1]])), titles=names,
                          shape=[no_row_in_plot, no_col_in_plot], colormap=cmap, fig=self._fig)
 
 
